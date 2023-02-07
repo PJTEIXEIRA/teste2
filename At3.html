@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 1
+        var id=0
+        var somaid=0
+        var contbom=0
+        var r=0
+        var somatot = 0
+        var media=0
+        var porcent=0
+        for(i=0 ;i<10 ;i++){
+                var idade = parseInt(prompt("Digite sua idade"))
+                var avali = parseInt (prompt("Qual a sua opinião sobre o filme?\n\n 1-Otimo \n 2-Bom \n 3-Regular \n 4-Resultados \n 5-Cancelar"))
+                switch(avali){
+                    case 1:
+                        somaid=somaid+idade
+                        id++
+                    break;
+                    case 2:
+                        contbom++
+                    break;
+                    case 3:
+                        r++
+                    break;
+                }
+        }
+        alert('Votaram [Regular]: '+r);
+        somatot = id+contbom+r
+        porcent = (somatot*contbom)/100
+        alert('Porcentagem de votos [Bom]:'+porcent);
+        media=somaid/id
+        alert('Média de votos [Ótimo]'+media);
+        
+    </script>
+</body>
+</html>
